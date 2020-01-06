@@ -1,1 +1,45 @@
 env: develop
+
+server:
+  port: 8090
+  servlet:
+    context-path: /order
+
+spring:
+  application:
+    name: order
+---
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/SpringCloud_order?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  data:
+    jpa:
+      repositories:
+        enabled: true
+      show-sql: true
+      database: mysql
+  profiles: dev
+
+product:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule
+
+---
+datasource:
+  url: jdbc:mysql://192.168.13.150:3306/SpringCloud_order?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+  username: root
+  password: 123456
+  driver-class-name: com.mysql.jdbc.Driver
+  data:
+    jpa:
+      repositories:
+        enabled: true
+      show-sql: true
+      database: mysql
+  profiles: online
+
+  product:
+    ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
