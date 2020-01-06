@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /product
+#  port: 8091
+
+spring:
+  application:
+    name: product
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/SpringCloud_product?chracterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+  data:
+    jpa:
+      repositories:
+        enabled: true
+      show-sql: true
+      database: mysql
