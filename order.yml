@@ -25,6 +25,9 @@ spring:
 product:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule
+girl: 
+  name: lili
+  age: 18
 
 ---
 spring: 
