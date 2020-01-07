@@ -17,3 +17,8 @@ spring:
         enabled: true
       show-sql: true
       database: mysql
+  rabbitmq:
+    addresses: 192.168.90.101
+    port: 5672
+    username: guest
+    password: guest
