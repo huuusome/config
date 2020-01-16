@@ -22,7 +22,7 @@ spring:
       database: mysql
   profiles: dev
   rabbitmq:
-    addresses: 192.168.90.101
+    addresses: 192.168.90.100
     port: 5672
     username: guest
     password: guest
