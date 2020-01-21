@@ -26,6 +26,9 @@ spring:
     port: 5672
     username: guest
     password: guest
+  redis:
+    host: 192.168.90.100
+    port: 6379
 
 product:
   ribbon:
