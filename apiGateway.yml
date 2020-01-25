@@ -5,7 +5,7 @@ server:
 spring:
   profiles: dev
 zuul:
-#  sensitive-headers:
+  sensitive-headers:
   routes:
 #    product:
 #      serviceId: product
@@ -15,3 +15,4 @@ zuul:
     #忽略的路由
   ignored-patterns:
     - /product/product/server/msg
+    - /myproduct/product/server/msg
