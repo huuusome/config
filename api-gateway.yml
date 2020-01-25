@@ -4,6 +4,9 @@ spring:
   application:
     name: apiGateWay
 
+---
+spring:
+  profiles: dev
 zuul:
 #  sensitive-headers:
   routes:
