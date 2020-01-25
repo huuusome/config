@@ -1,0 +1,17 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: apiGateWay
+
+zuul:
+#  sensitive-headers:
+  routes:
+#    product:
+#      serviceId: product
+#      path: /myproduct/**
+      #简洁写法
+    product: /myproduct/**
+    #忽略的路由
+  ignored-patterns:
+    - /product/product/server/msg
